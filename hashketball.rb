@@ -190,6 +190,17 @@ numbers = []
 end
 
 def player_stats(player_name)
+  game_hash.each do |location, data_hash|
+    data_hash.each do |team_attributes, values|
+      if team_attributes == :players
+        values.each do |names, player_data|
+          if names == player_name
+            return player_data
+          end
+        end
+      end
+    end
+  end
 end
 
 
