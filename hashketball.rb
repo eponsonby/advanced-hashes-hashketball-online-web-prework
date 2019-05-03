@@ -174,8 +174,10 @@ def team_names
 end
 
 def player_numbers(team_name)
-  game_hash.each do |location, team_data|
+  game_hash.each do |location_hash, team_data|
       team_data.each do |attribute, data|
+        if attribtue == players
+          data.each do |name, player_data_hash|
     end
   end
 end
